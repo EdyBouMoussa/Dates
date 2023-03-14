@@ -2,11 +2,11 @@ import javax.swing.JOptionPane;
 
 
 public class Easter{
-	public static String  EasterDay(int year){
-		int month, day, easterDate, daysInYear, isLeap;
+	public static void  main(String[] args){
+		int year, month, day, easterDate, daysInYear, isLeap;
 		String isMarch, answer;
-		//String input = JOptionPane.showInputDialog("Please write the wanted year (>2000) : ");
-		//year = Integer.parseInt(input);
+		String input = JOptionPane.showInputDialog("Please write the wanted year (>2000) : ");
+		year = Integer.parseInt(input);
 
 		easterDate = Calendar.findEaster(year);
 
@@ -25,9 +25,8 @@ public class Easter{
 		isMarch = ( month == 03 ) ? "March" : "April" ;		//the month, since it is either march or april
 		answer = isMarch + " " + day ;			//returns the month and the date in one line of string
 
-		//JOptionPane.showMessageDialog(null,"The Date for Easter in " + year + " is : " + answer );
+		JOptionPane.showMessageDialog(null,"The Date for Easter in " + year + " is : " + answer );
 		
-		return answer;
 		
 	}
 }
